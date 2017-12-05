@@ -7,15 +7,15 @@ for updates. This allows for effortless work in with the QueryRenderer.
 
 #### Viewing feed requires login
 
-![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot1.png?raw=true "Title")
+![Alt text](/img/screenshot1.png?raw=true "Title")
 
 #### Feed View
 
-![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot2.png?raw=true "Title")
+![Alt text](/img/screenshot2.png?raw=true "Title")
 
 #### Scrolling to the bottom triggers `loadMore()` pagination
 
-![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot3.png?raw=true "Title")
+![Alt text](/img/screenshot3.png?raw=true "Title")
 
 <br>
 <hr>
