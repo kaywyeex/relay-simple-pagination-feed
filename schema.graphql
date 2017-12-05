@@ -1,0 +1,114 @@
+input LoginInput {
+  username: String
+  password: String
+  clientMutationId: String
+}
+
+type LoginPayload {
+  viewer: User
+  userId: ID
+  clientMutationId: String
+}
+
+# ...
+type Mutation {
+  signup(input: SignupInput!): SignupPayload
+  login(input: LoginInput!): LoginPayload
+  logout: User
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+# Post fetched from an external source
+type Post implements Node {
+  # The ID of an object
+  id: ID!
+  postId: String
+  source: String
+  author: String
+  title: String
+  content: String
+  link: String
+  time: String
+}
+
+# A connection to a list of items.
+type PostConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [PostEdge]
+}
+
+# An edge in a connection.
+type PostEdge {
+  # The item at the end of the edge
+  node: Post
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type Query {
+  viewer: User
+  post(postId: ID): Post
+  posts: [Post]
+
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+  users: [User]
+}
+
+input SignupInput {
+  email: String
+  username: String
+  password: String
+  clientMutationId: String
+}
+
+type SignupPayload {
+  viewer: User
+  clientMutationId: String
+}
+
+# A registered user of the application
+type User implements Node {
+  # The ID of an object
+  id: ID!
+
+  # id of user in db
+  userId: String
+
+  # email of user
+  email: String
+
+  # username of user in db
+  username: String
+
+  # Posts listed under the user
+  posts(after: String, first: Int, before: String, last: Int): PostConnection
+}
+

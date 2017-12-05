@@ -1,0 +1,7 @@
+.header {
+    width: auto !important; /* Override Inline Style...*/
+    padding: 0 !important; /* Override Inline Style...*/
+}
+.header button {
+    margin: 0 !important; /* Override Inline Style...*/
+}

@@ -1,0 +1,23 @@
+.maximized {
+    width: 224px;
+    background: #3e3e3e;
+    position: absolute;
+    overflow: visible;
+    padding-bottom: 24px;
+    height: 100vh;
+    box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+    color: #999;
+}
+.minimized {
+    width: 48px !important;
+}
+
+/* == MenuItems == */
+.maximized div span div div,
+.minimized div span div div {
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.minimized div span div div {
+    padding: 0px !important;
+}
