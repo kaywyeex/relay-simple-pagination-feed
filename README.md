@@ -1,3 +1,22 @@
+Showcase of relay/graphql pagination usage with a simple login restrictions.
+Scrolling to the bottom triggers `loadMore()`.
+
+The project was made with RethinkDB storing the posts, and mongodb for users.
+RethinkDB enables automatic subscription to pushed changes, rather than polling
+for updates. This allows for effortless work in with the QueryRenderer.
+
+#### Viewing feed requires login
+
+![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot1.png?raw=true "Title")
+
+#### Feed View
+
+![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot2.png?raw=true "Title")
+
+#### Scrolling to the bottom triggers `loadMore()` pagination
+
+![Alt text](https://gitlab.com/Kaywyeex/relay-pagination-feed/tree/master/img/screenshot3.png?raw=true "Title")
+
 <br>
 <hr>
 <br>
